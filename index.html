@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#D9A441">
+  <meta name="description" content="GOMBE OIL RICE — Quality Rice & Pure Oil. Premium rice and pure oil supply from farm to table.">
+  <meta property="og:title" content="GOMBE OIL RICE — Quality Rice & Pure Oil">
+  <meta property="og:description" content="Premium rice and pure oil supply from farm to table.">
+  <meta property="og:image" content="placeholder-og-image.jpg">
+  <link rel="icon" href="favicon-placeholder.ico">
+  <title>GOMBE OIL RICE — Quality Rice & Pure Oil</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables for theming */
+    :root{
+      --bg:#FAFBFC; --text:#0f1724; --muted:#6b7280; --accent:#D9A441; --card:#ffffff; --glass:rgba(255,255,255,0.6);
+      --radius:12px; --shadow:0 6px 18px rgba(15,23,36,0.08);
+    }
+    [data-theme='dark']{
+      --bg:#0F1724; --text:#e6eef8; --muted:#9aa6b2; --accent:#D9A441; --card:#0b1220; --glass:rgba(255,255,255,0.03);
+      --shadow:0 10px 24px rgba(2,6,23,0.6);
+    }
+
+    html,body{height:100%;}
+    body{
+      background:lightblue;
+      color:var(--text);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      scroll-behavior: smooth; /* fallback; we handle offset in JS */
+    }
+
+    /* Skip link */
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#000;color:#fff;padding:8px 12px;border-radius:6px}
+
+    /* Navbar */
+    .navbar{backdrop-filter: blur(4px); background:var(--glass); box-shadow:var(--shadow)}
+    .navbar-brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:0.4px}
+.hero{
+  background-image:
+    linear-gradient(rgba(8,12,18,0.35), rgba(8,12,18,0.35)),
+    url('gomberice1.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+    
+    [data-theme='dark'] .hero{background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1496346651079-6ca5cb67f42f?auto=format&fit=crop&w=1600&q=60')}
+    .hero .overlay{background:linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.25)); padding:60px}
+
+    .trust-row .icon{width:40px;height:40px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:var(--card);box-shadow:var(--shadow);margin-right:10px}
+
+    /* Cards */
+    .service-card{border-radius:var(--radius); background:var(--card); box-shadow:var(--shadow); transition:transform .22s ease, box-shadow .22s ease}
+    .service-card:hover{transform:translateY(-8px); box-shadow:0 14px 40px rgba(2,6,23,0.12)}
+
+    /* Gallery */
+    .gallery-item{overflow:hidden;border-radius:10px;position:relative}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+    .gallery-item:hover img{transform:scale(1.08)}
+    .gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:10px;background:linear-gradient(180deg, transparent, rgba(0,0,0,0.45));color:#fff;font-size:0.9rem}
+
+    /* Lightbox */
+    .lightbox-backdrop{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);z-index:2000}
+    .lightbox-content{max-width:90vw;max-height:90vh;border-radius:10px;overflow:hidden}
+    .lightbox-content img{width:100%;height:auto;display:block}
+
+    /* Video placeholder */
+    .video-thumb{position:relative;background:#000;height:0;padding-bottom:56.25%;cursor:pointer;border-radius:10px;overflow:hidden}
+    .video-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .video-thumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--card);padding:10px;border-radius:50%}
+
+    /* Contact */
+    .alert-auto{transition:opacity .5s ease, transform .4s ease}
+
+    /* Focus states */
+    :focus{outline:2px solid var(--accent);outline-offset:2px}
+    .btn:focus{box-shadow:0 0 0 4px rgba(217,164,65,0.14)}
+
+    /* Responsive tweaks */
+    @media (max-width: 768px){
+      .hero{padding:100px 0 40px}
+    }
+
+    /* utility */
+    .muted{color:var(--muted)}
+
+    .bayero{
+      margin-top: 50px;
+    }
+    section{
+  scroll-margin-top: 90px;
+}
+
+
+  </style>
+</head>
+<body>
+
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">GOMBE OIL RICE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item dropdown" id="servicesDropdown">
+              <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item service-link" href="#services" data-service="Rice Selling">Rice Selling</a></li>
+                <li><a class="dropdown-item service-link" href="#services" data-service="Rice Cleaning">Rice Cleaning</a></li>
+                <li><a class="dropdown-item service-link" href="#services" data-service="Rice Supply">Rice Supply</a></li>
+                <li><a class="dropdown-item service-link" href="#services" data-service="Pure Oil">Pure Oil</a></li>
+                <li><a class="dropdown-item service-link" href="#services" data-service="Oil Supply">Oil Supply</a></li>
+                <li><a class="dropdown-item service-link" href="#services" data-service="Buying & Selling Goods">Buying & Selling Goods</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+            <li class="nav-item">
+    <a class="nav-link" href="#videos">Videos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#gallery">Gallery</a>
+  </li>
+
+          </ul>
+          
+
+
+          <div class="d-flex align-items-center">
+            <button id="themeToggle" class="btn btn-sm btn-outline-secondary me-2" aria-pressed="false" aria-label="Toggle theme">🌙 Dark</button>
+            <a class="btn btn-primary btn-sm" href="https://wa.me/2349047377687" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero" role="region" aria-label="Home">
+      <div class="overlay">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7 text-white">
+              <h1 class="display-5 fw-bold">GOMBE OIL RICE</h1>
+              <p class="lead">Carefully grown rice and pure oil — beauty and care from field to table.</p>
+              <div class="mt-4">
+               <a class="nav-link" href="#services">Our Services</a>
+                <a href="#contact" class="btn btn-lg btn-outline-light">Contact Us</a>
+              </div>
+
+              <div class="row mt-4 trust-row text-muted">
+                <div style="color: red;" class="col-12 col-md-4 d-flex align-items-center mb-2"><div class="icon me-2">✓</div><small>Quality Verified</small></div>
+                <div style="color: red;" class="col-12 col-md-4 d-flex align-items-center mb-2"><div class="icon me-2">⚡</div><small>Fast Supply</small></div>
+                <div style="color: red;" class="col-12 col-md-4 d-flex align-items-center mb-2"><div class="icon me-2">🌾</div><small>Trusted by Farmers</small></div>
+              </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+              <img class="bayero" src="gomberice1.png" alt="Rice field" width="520" height="320" style="border-radius:12px;box-shadow:var(--shadow)" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h2>About Us</h2>
+            <p class="muted">Gombe Oil Rice is committed to delivering premium rice and pure oil to households and businesses. Our supply chain supports local farmers and maintains strict quality control.</p>
+            <ul>
+              <li>Quality assurance at every step</li>
+              <li>Sustainable farming partnerships</li>
+              <li>Reliable nationwide supply</li>
+            </ul>
+            <blockquote class="mt-3">"Our mission is simple: deliver care & quality." — CEO</blockquote>
+          </div>
+          <div class="col-lg-6">
+            <img src="gomberice2.png" alt="" width="520" height="320" style="border-radius:12px;box-shadow:var(--shadow);width:100%;height:auto" loading="lazy">
+                   </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-5 bg-transparent" aria-label="Services">
+      <div class="container">
+        <h2 style="text-align: center;" class="mb-4">Our Services</h2>
+        <div class="row gy-4">
+
+          <!-- Service Card Template -->
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="p-3 service-card">
+              <div class="d-flex align-items-start">
+                <div class="me-3" style="font-size:28px;">🌾</div>
+                <div>
+                  <h5>Rice Selling</h5>
+                  <p class="muted">High-quality rice, bagged and ready for sale.</p>
+                  <div><button class="btn btn-sm btn-outline-primary order-btn" data-service="Rice Selling">Order</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="p-3 service-card">
+              <div class="d-flex align-items-start">
+                <div class="me-3" style="font-size:28px;">🧹</div>
+                <div>
+                  <h5>Rice Cleaning</h5>
+                  <p class="muted">Careful cleaning to ensure purity and safety.</p>
+                  <div><button class="btn btn-sm btn-outline-primary order-btn" data-service="Rice Cleaning">Order</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="p-3 service-card">
+              <div class="d-flex align-items-start">
+                <div class="me-3" style="font-size:28px;">🚚</div>
+                <div>
+                  <h5>Rice Supply</h5>
+                  <p class="muted">Bulk supply solutions for retailers and distributors.</p>
+                  <div><button class="btn btn-sm btn-outline-primary order-btn" data-service="Rice Supply">Order</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="p-3 service-card">
+              <div class="d-flex align-items-start">
+                <div class="me-3" style="font-size:28px;">🫗</div>
+                <div>
+                  <h5>Pure Oil</h5>
+                  <p class="muted">Cold-pressed, pure cooking oil packed with care.</p>
+                  <div><button class="btn btn-sm btn-outline-primary order-btn" data-service="Pure Oil">Order</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="p-3 service-card">
+              <div class="d-flex align-items-start">
+                <div class="me-3" style="font-size:28px;">🛢️</div>
+                <div>
+                  <h5>Oil Supply</h5>
+                  <p class="muted">Reliable oil supply for restaurants and retail.</p>
+                  <div><button class="btn btn-sm btn-outline-primary order-btn" data-service="Oil Supply">Order</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="p-3 service-card">
+              <div class="d-flex align-items-start">
+                <div class="me-3" style="font-size:28px;">🔁</div>
+                <div>
+                  <h5>Buying &amp; Selling Goods</h5>
+                  <p class="muted">Marketplace services for local produce and goods.</p>
+                  <div><button class="btn btn-sm btn-outline-primary order-btn" data-service="Buying & Selling Goods">Order</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT VIDEOS -->
+    <section id="videos" class="py-5">
+      <div class="container">
+        <h2 style="text-align: center;" class="mb-4">Product Videos</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="video-thumb" data-youtube-id="dQw4w9WgXcQ" tabindex="0" role="button" aria-label="Play video 1">
+              <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video 1 thumbnail" loading="lazy">
+              <div class="play">▶</div>
+            </div>
+            <small class="d-block mt-2">How we prepare and pack our rice.</small>
+          </div>
+
+          <div class="col-md-4">
+            <div class="video-thumb" data-youtube-id="M7lc1UVf-VE" tabindex="0" role="button" aria-label="Play video 2">
+              <img src="https://img.youtube.com/vi/M7lc1UVf-VE/hqdefault.jpg" alt="Video 2 thumbnail" loading="lazy">
+              <div class="play">▶</div>
+            </div>
+            <small class="d-block mt-2">Our oil extraction and purity checks.</small>
+          </div>
+
+          <div class="col-md-4">
+            <div class="video-thumb" data-youtube-id="kXYiU_JCYtU" tabindex="0" role="button" aria-label="Play video 3">
+              <img src="https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg" alt="Video 3 thumbnail" loading="lazy">
+              <div class="play">▶</div>
+            </div>
+            <small class="d-block mt-2">Sustainable farming partnerships in action.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="gallery" class="py-5 bg-transparent">
+      <div class="container">
+        <h2 style="text-align: center;" class="mb-4">Gallery</h2>
+        <div class="row g-3">
+          <!-- 9 images -->
+          <!-- Using Unsplash placeholders for demo -->
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 1">
+              <img src="gombeoilrice3.png" alt="">
+              <div class="gallery-caption"><h4>Rice field sunrise</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 2">
+              <img src="gomberice4.png" alt="">
+               <div class="gallery-caption"><h4>oil of small size</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 3">
+              <img src="gomberice5.png" alt="">
+               <div class="gallery-caption"><h4>oil of big size</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1473235800703-6c8a4f0f9456?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 4">
+              <img src="gomberice7.png" alt="">
+              <div class="gallery-caption"><h4>Packing rice</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1524594154906-6a6a3e2d1d39?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 5">
+              <img src="gomberice11.png" alt="">
+              <div class="gallery-caption"><h4>Farmers</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 6">
+              <img src="gomberice10.png" alt="">
+              <div class="gallery-caption"><h4>Production side</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1509460913899-4b29f5f2b8c9?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 7">
+             <img src="gomberice6.png" alt="">
+              <div class="gallery-caption"><h4>Quality check</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 8">
+              <img src="gomberice2.png" alt="">
+              <div class="gallery-caption"><h4>Market</h4></div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <div class="gallery-item" tabindex="0" data-full="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=60" aria-label="Open image 9">
+<img src="gomberice9.png" alt="">
+              <div class="gallery-caption"> <h4>Community</h4></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <form id="contactForm" novalidate>
+              <div class="mb-3 visually-hidden"><label for="hp">Leave empty</label><input id="hp" name="hp" class="form-control"></div>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full name</label>
+                <input type="text" id="fullName" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <select id="subject" class="form-select">
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Rice Selling">Rice Selling</option>
+                  <option value="Rice Cleaning">Rice Cleaning</option>
+                  <option value="Rice Supply">Rice Supply</option>
+                  <option value="Pure Oil">Pure Oil</option>
+                  <option value="Oil Supply">Oil Supply</option>
+                  <option value="Buying & Selling Goods">Buying & Selling Goods</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-control" rows="5" required></textarea>
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
+                <button type="button" id="mailtoFallback" class="btn btn-outline-secondary ms-2">Use Email</button>
+              </div>
+            </form>
+            <div id="formAlert" class="alert alert-success d-none" role="status" aria-live="polite"></div>
+          </div>
+          <div class="col-lg-6">
+            <h5>Contact Details</h5>
+            <p>Phone: <a href="tel:+2349047377687">+234 904 737 7687</a></p>
+            <p>Email: <a href="mailto:info@gombeoilrice.example">info@gombeoilrice.com</a></p>
+            <p>Address: Gombe, Nigeria</p>
+            <p class="muted">Note: If WhatsApp does not open in your browser, use the Email fallback button above.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 bg-transparent">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>&copy; <span id="year"></span> GOMBE OIL RICE</div>
+      <div class="d-flex gap-3 mt-2 mt-md-0">
+        <a href="https://wa.me/2349047377687" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="#" rel="noopener noreferrer">Facebook</a>
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox placeholder container -->
+  <div id="lightbox" class="d-none" tabindex="-1"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /* -------------------- Utility & Initialization -------------------- */
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const THEME_KEY = 'gombe_theme';
+
+    function setTheme(name, save=true){
+      if(name === 'dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', name==='dark' ? '#0F1724' : '#D9A441');
+      if(save && window.localStorage) localStorage.setItem(THEME_KEY, name);
+      themeToggle.textContent = name==='dark' ? '☀️ Light' : '🌙 Dark';
+      themeToggle.setAttribute('aria-pressed', name==='dark');
+    }
+
+    // init theme
+    try{
+      const saved = localStorage.getItem(THEME_KEY);
+      if(saved) setTheme(saved,false);
+      else setTheme(prefersDark ? 'dark' : 'light', false);
+    }catch(e){ setTheme(prefersDark ? 'dark' : 'light', false);} 
+
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      setTheme(isDark ? 'light' : 'dark');
+    });
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* -------------------- Smooth scroll with offset -------------------- */
+    function scrollToAnchor(hash){
+      const el = document.querySelector(hash);
+      if(!el) return;
+      const navOffset = 70; // px
+      const top = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+      window.scrollTo({top,behavior:'smooth'});
+    }
+
+    // intercept nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          scrollToAnchor(href);
+          // collapse navbar on mobile
+          const bsCollapse = bootstrap.Collapse.getInstance(document.getElementById('navMain'));
+          if(bsCollapse && window.getComputedStyle(document.querySelector('.navbar-toggler')).display !== 'none') bsCollapse.hide();
+        }
+      });
+    });
+
+    /* -------------------- Dropdown open on hover for non-touch devices -------------------- */
+    (function(){
+      const dropdown = document.getElementById('servicesDropdown');
+      let touch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+      if(!touch){
+        dropdown.addEventListener('mouseenter', ()=>{
+          const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+          const inst = bootstrap.Dropdown.getOrCreateInstance(toggle);
+          inst.show();
+        });
+        dropdown.addEventListener('mouseleave', ()=>{
+          const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+          const inst = bootstrap.Dropdown.getOrCreateInstance(toggle);
+          inst.hide();
+        });
+      }
+
+      // close dropdown after selecting service; also prefill subject
+      document.querySelectorAll('.service-link').forEach(link=>{
+        link.addEventListener('click', (e)=>{
+          const subj = link.dataset.service || 'General Inquiry';
+          const subjectEl = document.getElementById('subject');
+          if(subjectEl) subjectEl.value = subj;
+          // collapse mobile menu
+          const bsCollapse = bootstrap.Collapse.getInstance(document.getElementById('navMain'));
+          if(bsCollapse) bsCollapse.hide();
+          // hide dropdown
+          const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+          const dinst = bootstrap.Dropdown.getOrCreateInstance(toggle);
+          dinst.hide();
+        });
+      });
+    })();
+
+    /* -------------------- Service card order buttons prefill subject + close dropdown -------------------- */
+    document.querySelectorAll('.order-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const subj = btn.dataset.service || 'General Inquiry';
+        document.getElementById('subject').value = subj;
+        scrollToAnchor('#contact');
+      });
+    });
+
+    /* -------------------- Contact form: build WhatsApp URL and redirect -------------------- */
+    const contactForm = document.getElementById('contactForm');
+    const formAlert = document.getElementById('formAlert');
+    const phone = '+2349047377687';
+
+    function showAlert(msg, type='success', timeout=6000){
+      formAlert.className = 'alert alert-'+type+' alert-auto';
+      formAlert.textContent = msg;
+      formAlert.classList.remove('d-none');
+      formAlert.style.opacity = '1';
+      setTimeout(()=>{
+        formAlert.style.opacity = '0';
+        setTimeout(()=> formAlert.classList.add('d-none'),500);
+      }, timeout);
+    }
+
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      // simple honeypot
+      if(document.getElementById('hp').value) return; // likely bot
+
+      const name = document.getElementById('fullName');
+      const email = document.getElementById('email');
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+
+      if(!name.value.trim() || !email.checkValidity() || !message.value.trim()){
+        showAlert('Please fill all required fields correctly.','danger',4000);
+        return;
+      }
+
+      const text = `Name: ${name.value}\nEmail: ${email.value}\nSubject: ${subject.value}\nMessage: ${message.value}`;
+      const encoded = encodeURIComponent(text);
+      const waUrl = `https://wa.me/${phone.replace(/[^0-9]/g,'')}?text=${encoded}`;
+
+      // show success alert and reset
+      showAlert('Opening WhatsApp... You will be redirected shortly.','success',5000);
+      contactForm.reset();
+
+      // attempt redirect
+      setTimeout(()=>{
+        window.location.href = waUrl;
+      }, 700);
+    });
+
+    document.getElementById('mailtoFallback').addEventListener('click', ()=>{
+      const name = document.getElementById('fullName').value || '';
+      const email = document.getElementById('email').value || '';
+      const subject = encodeURIComponent(document.getElementById('subject').value || 'General Inquiry');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n`);
+      window.location.href = `mailto:info@gombeoilrice.example?subject=${subject}&body=${body}`;
+    });
+
+    /* -------------------- Lazy-load YouTube iframes on click -------------------- */
+    function loadYouTube(el){
+      const id = el.dataset.youtubeId;
+      if(!id) return;
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`);
+      iframe.setAttribute('title','YouTube video player');
+      iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen','');
+      iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.position = 'absolute'; iframe.style.left='0'; iframe.style.top='0';
+      el.innerHTML = ''; el.appendChild(iframe);
+    }
+    document.querySelectorAll('.video-thumb').forEach(v=>{
+      v.addEventListener('click', ()=> loadYouTube(v));
+      v.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadYouTube(v);} });
+    });
+
+    /* -------------------- Image lightbox (simple) -------------------- */
+    const lightboxRoot = document.getElementById('lightbox');
+    function openLightbox(src, alt=''){
+      lightboxRoot.innerHTML = '';
+      lightboxRoot.classList.remove('d-none');
+      lightboxRoot.classList.add('lightbox-backdrop');
+      lightboxRoot.tabIndex = -1;
+      const content = document.createElement('div'); content.className='lightbox-content';
+      const img = document.createElement('img'); img.src = src; img.alt=alt; content.appendChild(img);
+      lightboxRoot.appendChild(content);
+      lightboxRoot.focus();
+      function close(){ lightboxRoot.classList.remove('lightbox-backdrop'); lightboxRoot.classList.add('d-none'); lightboxRoot.innerHTML=''; document.removeEventListener('keydown', onKey);} 
+      function onKey(e){ if(e.key === 'Escape') close(); }
+      setTimeout(()=> document.addEventListener('keydown', onKey),50);
+      lightboxRoot.addEventListener('click', close, {once:true});
+    }
+    document.querySelectorAll('.gallery-item').forEach(item=>{
+      item.addEventListener('click', ()=> openLightbox(item.dataset.full,item.querySelector('img').alt));
+      item.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') openLightbox(item.dataset.full,item.querySelector('img').alt); });
+    });
+
+    /* -------------------- small debounce helper -------------------- */
+    function debounce(fn,wait){let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn.apply(this,args),wait); }; }
+
+    /* -------------------- graceful localStorage check -------------------- */
+    (function(){ try{ localStorage.getItem('test'); }catch(e){ console.warn('localStorage not available'); }})();
+
+    /* -------------------- accessibility enhancements -------------------- */
+    // Ensure focus visible only on keyboard
+    function handleFirstTab(e){ if(e.key === 'Tab') document.body.classList.add('user-is-tabbing'); }
+    window.addEventListener('keydown', handleFirstTab, {once:true});
+
+  </script>
+
+</body>
+</html>
